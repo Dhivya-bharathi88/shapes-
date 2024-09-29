@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shape Area Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <h1>Shape Area Calculator</h1>
 
-    <div class="shape circle" onclick="calculateArea('circle', 10)">
-        Circle
+    <div class="shapes">
+        <div id="circle" class="shape circle"></div>
+        <div id="square" class="shape square"></div>
+        <div id="triangle" class="shape triangle"></div>
     </div>
 
-    <div class="shape square" onclick="calculateArea('square', 10)">
-        Square
-    </div>
-    
-    <div class="shape triangle" onclick="calculateArea('triangle', 10, 10)">
-        Triangle
-    </div>
-    <div id="result">
+    <div id="circle-input" class="shape-input" style="display: none;">
+        <label for="radius">Radius:</label>
+        <input type="number" id="radius" placeholder="Enter radius">
+        <button id="calculate-circle-btn">Calculate Area</button>
+        <p id="circle-result"></p>
     </div>
 
-    <script src="practice.js"></script>
+    <div id="square-input" class="shape-input" style="display: none;">
+        <label for="side">Side:</label>
+        <input type="number" id="side" placeholder="Enter side length">
+        <button id="calculate-square-btn">Calculate Area</button>
+        <p id="square-result"></p>
+    </div>
+
+    <div id="triangle-input" class="shape-input" style="display: none;">
+        <label for="base">Base:</label>
+        <input type="number" id="base" placeholder="Enter base">
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="Enter height">
+        <button id="calculate-triangle-btn">Calculate Area</button>
+        <p id="triangle-result"></p>
+    </div>
+
+    <script src="assets/scripts.js"></script>
 </body>
 </html>
